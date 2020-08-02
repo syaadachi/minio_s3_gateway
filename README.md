@@ -1,0 +1,2 @@
+# minio_s3_gateway
+MinIO S3 Gatewayを使ってS3互換のオブジェクトストレージをブラウザーから操作できるようにします。
