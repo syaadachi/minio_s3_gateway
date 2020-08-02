@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  minio:
+    container_name: minio
+    image: minio/minio
+    ports:
+      - 9000:9000
+    environment:
+      - MINIO_ACCESS_KEY=${S3PROXY_IDENTITY}
+      - MINIO_SECRET_KEY=${S3PROXY_CREDENTIAL}
+    command: gateway s3 ${S3PROXY_URL}
